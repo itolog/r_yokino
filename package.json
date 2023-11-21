@@ -11,17 +11,24 @@
     "lint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.14.18",
+    "@tauri-apps/api": "^2.0.0-alpha.11",
+    "@tauri-apps/plugin-shell": "^2.0.0-alpha.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@tauri-apps/api": "^2.0.0-alpha.11",
-    "@tauri-apps/plugin-shell": "^2.0.0-alpha.3"
+    "react-router-dom": "^6.19.0"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0-alpha.17",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^4.0.3",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
+    "@vitejs/plugin-react": "^4.0.3",
     "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.29.0",
@@ -29,8 +36,8 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.1.0",
+    "sass": "^1.69.5",
     "typescript": "^5.0.2",
-    "vite": "^4.4.4",
-    "@tauri-apps/cli": "^2.0.0-alpha.17"
+    "vite": "^4.4.4"
   }
 }
