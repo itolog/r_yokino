@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Movies from "../components/Movies/Movies.tsx";
-import Series from "../components/Series/Series.tsx";
-import MainLayouts from "../Layouts/MainLayouts/MainLayouts.tsx";
+import Movies from "@/components/Movies/Movies";
+import Series from "@/components/Series/Series";
+import MainLayouts from "@/layouts/MainLayouts/MainLayouts.tsx";
 
 const router = createBrowserRouter([
   {

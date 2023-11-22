@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { resolve } from "node:path";
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
@@ -13,5 +14,16 @@ export default defineConfig(async () => ({
   server: {
     port: 1420,
     strictPort: true,
-  }
+  },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "./src"),
+      "@assets": resolve(__dirname, "./src/assets"),
+      "@components": resolve(__dirname, "./src/components"),
+      "@layouts": resolve(__dirname, "./src/layouts"),
+      "@shared": resolve(__dirname, "./src/shared"),
+      "@store": resolve(__dirname, "./src/store"),
+      "@pages": resolve(__dirname, "./src/pages"),
+    },
+  },
 }));
