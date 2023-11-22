@@ -8,5 +8,25 @@
   "singleQuote": false,
   "jsxSingleQuote": false,
   "bracketSameLine": true,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^@fontsource/(.*)$",
+    "^@router/(.*)$",
+    "^@assets/(.*)$",
+    "^@types/(.*)$",
+    "^@config/(.*)$",
+    "^@layouts/(.*)$",
+    "^@pages/(.*)$",
+    "^@shared/(.*)$",
+    "^@components/(.*)$",
+    "^@store/(.*)$",
+    "^[./]",
+    "^(?!.*[.]scss$)[./].*$", ".scss$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderCaseInsensitive": true,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports"
+  ]
 }

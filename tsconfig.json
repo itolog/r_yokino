@@ -28,6 +28,7 @@
       "@shared/*": ["src/shared/*"],
       "@store/*": ["src/store/*"],
       "@pages/*": ["src/pages/*"],
+      "@router/*": ["src/router/*"],
     }
   },
   "include": ["src"],
