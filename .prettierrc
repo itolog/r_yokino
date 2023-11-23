@@ -10,7 +10,9 @@
   "bracketSameLine": true,
   "arrowParens": "always",
   "importOrder": [
+    "react",
     "<THIRD_PARTY_MODULES>",
+    "^@mui/(.*)$",
     "^@fontsource/(.*)$",
     "^@router/(.*)$",
     "^@assets/(.*)$",
@@ -26,6 +28,7 @@
   ],
   "importOrderSeparation": true,
   "importOrderCaseInsensitive": true,
+  "importOrderSortSpecifiers": true,
   "plugins": [
     "@trivago/prettier-plugin-sort-imports"
   ]

@@ -1,4 +1,5 @@
 import react from "@vitejs/plugin-react";
+
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
 
@@ -25,6 +26,7 @@ export default defineConfig(async () => ({
       "@shared": resolve(__dirname, "./src/shared"),
       "@store": resolve(__dirname, "./src/store"),
       "@pages": resolve(__dirname, "./src/pages"),
+      "@styles": resolve(__dirname, "./src/styles"),
     },
   },
 }));
