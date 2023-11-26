@@ -2,10 +2,18 @@ import react from "@vitejs/plugin-react";
 
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
+import stylelint from "vite-plugin-stylelint";
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
-  plugins: [react()],
+  plugins: [
+    react(),
+    stylelint({
+      fix: true,
+      lintInWorker: true,
+      cache: false,
+    }),
+  ],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   //
