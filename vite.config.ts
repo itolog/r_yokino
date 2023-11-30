@@ -31,7 +31,7 @@ export default defineConfig(async () => ({
       "@router": resolve(__dirname, "./src/router"),
       "@components": resolve(__dirname, "./src/components"),
       "@layouts": resolve(__dirname, "./src/layouts"),
-      "@shared": resolve(__dirname, "./src/shared"),
+      "@shared": resolve(__dirname, "./src/ui"),
       "@store": resolve(__dirname, "./src/store"),
       "@pages": resolve(__dirname, "./src/pages"),
       "@styles": resolve(__dirname, "./src/styles"),
