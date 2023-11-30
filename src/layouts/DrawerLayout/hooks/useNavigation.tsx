@@ -1,12 +1,12 @@
 import { useMemo } from "react";
 
-import { Navigation, NavigationProps } from "@/types/navigation/navigation.ts";
-
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 
+import { NavigationOptions, NavigationProps } from "@/types/navigation";
+
 const useNavigation = (): NavigationProps => {
-  const options: Navigation[] = useMemo(() => {
+  const options: NavigationOptions[] = useMemo(() => {
     return [
       {
         id: 1,

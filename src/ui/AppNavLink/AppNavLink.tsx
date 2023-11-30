@@ -1,11 +1,12 @@
-import { FC } from "react";
+import { forwardRef } from "react";
 import { NavLink, NavLinkProps } from "react-router-dom";
 
 import cl from "classnames";
 
-const AppNavLink: FC<NavLinkProps> = (props) => {
+const AppNavLink = forwardRef<HTMLAnchorElement, NavLinkProps>((props, ref) => {
   return (
     <NavLink
+      ref={ref}
       className={({ isActive, isPending }) => {
         return cl({
           active: isActive,
@@ -15,6 +16,7 @@ const AppNavLink: FC<NavLinkProps> = (props) => {
       {...props}
     />
   );
-};
+});
 
+AppNavLink.displayName = "AppNavLink";
 export default AppNavLink;

@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-export interface Navigation {
+export interface NavigationOptions {
   id: number;
   icon: ReactElement;
   label: string;
@@ -10,5 +10,5 @@ export interface Navigation {
 }
 
 export interface NavigationProps {
-  options: Navigation[];
+  options: NavigationOptions[];
 }

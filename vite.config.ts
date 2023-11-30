@@ -27,14 +27,15 @@ export default defineConfig(async () => ({
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
-      "@assets": resolve(__dirname, "./src/assets"),
-      "@router": resolve(__dirname, "./src/router"),
       "@components": resolve(__dirname, "./src/components"),
+      "@assets": resolve(__dirname, "./src/assets"),
       "@layouts": resolve(__dirname, "./src/layouts"),
-      "@shared": resolve(__dirname, "./src/ui"),
       "@store": resolve(__dirname, "./src/store"),
       "@pages": resolve(__dirname, "./src/pages"),
+      "@router": resolve(__dirname, "./src/router"),
       "@styles": resolve(__dirname, "./src/styles"),
+      "@ui": resolve(__dirname, "./src/ui"),
+      "@types": resolve(__dirname, "./src/types"),
     },
   },
 }));

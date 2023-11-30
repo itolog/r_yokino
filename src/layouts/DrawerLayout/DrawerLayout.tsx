@@ -1,8 +1,6 @@
 import * as React from "react";
 import { Outlet } from "react-router-dom";
 
-import AppNavItem from "@/ui/AppNavItem/AppNavItem.tsx";
-
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -16,7 +14,9 @@ import { CSSObject, styled, Theme, useTheme } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
-import useNavigation from "@layouts/DrawerLayout/hooks/useNavigation.tsx";
+import useNavigation from "@/layouts/DrawerLayout/hooks/useNavigation.tsx";
+
+import AppNavItem from "@/ui/AppNavItem/AppNavItem.tsx";
 
 const drawerWidth = 200;
 
@@ -86,7 +86,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" 
   }),
 }));
 
-export default function MiniDrawer() {
+const DrawerLayout = () => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -128,11 +128,8 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {options.map(({ divider, ...props }) => (
-            <>
-              <AppNavItem {...props} open={open} />
-              {divider && <Divider />}
-            </>
+          {options.map(({ id, ...props }) => (
+            <AppNavItem key={id} {...props} open={open} />
           ))}
         </List>
       </Drawer>
@@ -142,4 +139,6 @@ export default function MiniDrawer() {
       </Box>
     </Box>
   );
-}
+};
+
+export default DrawerLayout;
