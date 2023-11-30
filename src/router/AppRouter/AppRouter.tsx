@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import MainLayouts from "@layouts/MainLayouts/MainLayouts.tsx";
+import DrawerLayout from "@layouts/DrawerLayout/DrawerLayout.tsx";
 
 import Movies from "@pages/Movies/Movies.tsx";
 import Series from "@pages/Series/Series.tsx";
@@ -8,7 +8,7 @@ import Series from "@pages/Series/Series.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayouts />,
+    element: <DrawerLayout />,
     children: [
       { index: true, element: <Movies /> },
 
