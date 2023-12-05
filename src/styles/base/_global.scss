@@ -2,11 +2,11 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: Roboto, Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: calc(var(--base-unit) * .6);
-  line-height: calc(var(--base-unit) * .75);
+  font-size: calc(var(--base-unit) * .85);
+  line-height: normal;
   font-weight: 400;
   color: #0f0f0f;
-  background-color: #f6f6f6;
+  background-color: var(--primary-color);
   font-synthesis: none;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
