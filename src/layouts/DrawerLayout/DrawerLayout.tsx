@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Outlet } from "react-router-dom";
 
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -17,6 +16,11 @@ import Typography from "@mui/material/Typography";
 import useNavigation from "@/layouts/DrawerLayout/hooks/useNavigation.tsx";
 
 import AppNavItem from "@/ui/AppNavItem/AppNavItem.tsx";
+
+import Settings from "@/components/Settings/Settings.tsx";
+
+import { useAppDispatch, useAppSelector } from "@/store/hooks.ts";
+import { toggleDrawer } from "@/store/settings/settingsSlice.ts";
 
 const drawerWidth = 200;
 
@@ -88,21 +92,22 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" 
 
 const DrawerLayout = () => {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const dispatch = useAppDispatch();
+  const drawerOpen = useAppSelector((state) => state.settings.drawerOpen);
 
   const { options } = useNavigation();
 
   const handleDrawerOpen = () => {
-    setOpen(true);
+    dispatch(toggleDrawer(true));
   };
 
   const handleDrawerClose = () => {
-    setOpen(false);
+    dispatch(toggleDrawer(false));
   };
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={drawerOpen}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -111,7 +116,7 @@ const DrawerLayout = () => {
             edge="start"
             sx={{
               marginRight: 5,
-              ...(open && { display: "none" }),
+              ...(drawerOpen && { display: "none" }),
             }}>
             <MenuIcon />
           </IconButton>
@@ -120,8 +125,9 @@ const DrawerLayout = () => {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open}>
+      <Drawer variant="permanent" open={drawerOpen}>
         <DrawerHeader>
+          <Settings />
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
@@ -129,7 +135,7 @@ const DrawerLayout = () => {
         <Divider />
         <List>
           {options.map(({ id, ...props }) => (
-            <AppNavItem key={id} {...props} open={open} />
+            <AppNavItem key={id} {...props} open={drawerOpen} />
           ))}
         </List>
       </Drawer>
