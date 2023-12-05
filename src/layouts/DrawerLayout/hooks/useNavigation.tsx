@@ -5,6 +5,8 @@ import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 
 import { NavigationOptions, NavigationProps } from "@/types/navigation";
 
+import { pages } from "@/constants/navigations.ts";
+
 const useNavigation = (): NavigationProps => {
   const options: NavigationOptions[] = useMemo(() => {
     return [
@@ -12,14 +14,14 @@ const useNavigation = (): NavigationProps => {
         id: 1,
         label: "Movies",
         icon: <LocalMoviesIcon />,
-        to: "/",
+        to: pages.HOME,
         tooltip: "Movies",
       },
       {
         id: 2,
         label: "Series",
         icon: <LiveTvIcon />,
-        to: "series",
+        to: pages.SERIES,
         tooltip: "Series",
       },
     ];

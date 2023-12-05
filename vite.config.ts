@@ -36,6 +36,7 @@ export default defineConfig(async () => ({
       "@styles": resolve(__dirname, "./src/styles"),
       "@ui": resolve(__dirname, "./src/ui"),
       "@types": resolve(__dirname, "./src/types"),
+      "@constants": resolve(__dirname, "./src/constants"),
     },
   },
 }));

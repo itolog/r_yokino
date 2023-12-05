@@ -17,6 +17,7 @@
     "^@/router/(.*)$",
     "^@/assets/(.*)$",
     "^@/types/(.*)$",
+    "^@/constants/(.*)$",
     "^@/config/(.*)$",
     "^@/layouts/(.*)$",
     "^@/pages/(.*)$",
