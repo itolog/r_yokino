@@ -20,6 +20,7 @@ import AppNavItem from "@/ui/AppNavItem/AppNavItem.tsx";
 import Settings from "@/components/Settings/Settings.tsx";
 
 import { useAppDispatch, useAppSelector } from "@/store/hooks.ts";
+import { getDrawerOpen } from "@/store/selectors.ts";
 import { toggleDrawer } from "@/store/settings/settingsSlice.ts";
 
 const drawerWidth = 200;
@@ -93,7 +94,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" 
 const DrawerLayout = () => {
   const theme = useTheme();
   const dispatch = useAppDispatch();
-  const drawerOpen = useAppSelector((state) => state.settings.drawerOpen);
+  const drawerOpen = useAppSelector(getDrawerOpen);
 
   const { options } = useNavigation();
 
