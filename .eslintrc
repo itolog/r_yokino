@@ -38,6 +38,7 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }]
   }
 }

@@ -1,7 +1,11 @@
 :root[data-theme='light'] {
-  --primary-color: red
+  --primary-color: rgb(0 0 0 / 83%);
+  --app-bar-bg: #fff3e2;
+  --app-bg: #fff;
 }
 
 :root[data-theme='dark'] {
-  --primary-color: lime
+  --primary-color: #fff3e2;
+  --app-bar-bg: rgb(26 20 59 / 100%);
+  --app-bg: #1a143b;
 }

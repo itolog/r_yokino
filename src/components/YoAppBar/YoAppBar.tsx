@@ -12,6 +12,8 @@ import { useAppDispatch, useAppSelector } from "@/store/hooks.ts";
 import { getDrawerOpen } from "@/store/selectors.ts";
 import { toggleDrawer } from "@/store/settings/settingsSlice.ts";
 
+import classes from "./yoAppBar.module.scss";
+
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
 }
@@ -42,7 +44,12 @@ const YoAppBar = () => {
   };
 
   return (
-    <AppBar position="fixed" open={drawerOpen}>
+    <AppBar
+      classes={{
+        root: classes.yoAppBar,
+      }}
+      position="fixed"
+      open={drawerOpen}>
       <Toolbar>
         <IconButton
           color="inherit"
@@ -55,7 +62,7 @@ const YoAppBar = () => {
           }}>
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" noWrap component="div">
+        <Typography fontFamily={"Vollkorn"} variant="h6" noWrap component="div">
           Mini variant drawer
         </Typography>
       </Toolbar>

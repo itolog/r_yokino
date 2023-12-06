@@ -21,6 +21,8 @@ import { useAppDispatch, useAppSelector } from "@/store/hooks.ts";
 import { getDrawerOpen } from "@/store/selectors.ts";
 import { toggleDrawer } from "@/store/settings/settingsSlice.ts";
 
+import classes from "./drawerLayout.module.scss";
+
 const openedMixin = (theme: Theme): CSSObject => ({
   width: DRAWER_WIDTH,
   transition: theme.transitions.create("width", {
@@ -43,10 +45,6 @@ const closedMixin = (theme: Theme): CSSObject => ({
 });
 
 const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
-  padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
 }));
 
@@ -76,12 +74,16 @@ const DrawerLayout = () => {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", backgroundColor: "var(--app-bg)" }}>
       <YoAppBar />
       <Drawer variant="permanent" open={drawerOpen}>
-        <DrawerHeader>
+        <DrawerHeader className={classes.drawerHeader}>
           <Settings />
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton
+            classes={{
+              root: classes.chevronLeftIcon,
+            }}
+            onClick={handleDrawerClose}>
             <ChevronLeftIcon />
           </IconButton>
         </DrawerHeader>

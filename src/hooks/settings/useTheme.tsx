@@ -10,7 +10,6 @@ const useTheme = () => {
     if (root) {
       root.dataset.theme = theme;
     }
-    console.log(root);
   }, [theme]);
 };
 
