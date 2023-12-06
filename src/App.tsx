@@ -1,6 +1,6 @@
-import AppRouter from "@/router/AppRouter/AppRouter";
+import useTheme from "@/hooks/settings/useTheme.tsx";
 
-import useTheme from "@/assets/hooks/settings/useTheme.tsx";
+import AppRouter from "@/router/AppRouter/AppRouter";
 
 function App() {
   useTheme();
