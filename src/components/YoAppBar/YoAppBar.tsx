@@ -6,7 +6,8 @@ import { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar/AppBar";
 import IconButton from "@mui/material/IconButton";
 import { styled } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+
+import AppText from "@/ui/AppText/AppText.tsx";
 
 import { useAppDispatch, useAppSelector } from "@/store/hooks.ts";
 import { getDrawerOpen } from "@/store/selectors.ts";
@@ -62,9 +63,7 @@ const YoAppBar = () => {
           }}>
           <MenuIcon />
         </IconButton>
-        <Typography fontFamily={"Vollkorn"} variant="h6" noWrap component="div">
-          Mini variant drawer
-        </Typography>
+        <AppText>Mini variant drawer</AppText>
       </Toolbar>
     </AppBar>
   );
