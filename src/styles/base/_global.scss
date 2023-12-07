@@ -9,6 +9,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
+  background-color: var( --app-bar-bg);
 }
 
 @include scroll-bar;

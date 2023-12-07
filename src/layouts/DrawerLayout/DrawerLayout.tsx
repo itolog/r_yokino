@@ -76,7 +76,13 @@ const DrawerLayout = () => {
   return (
     <Box sx={{ display: "flex", backgroundColor: "var(--app-bg)" }}>
       <YoAppBar />
-      <Drawer variant="permanent" open={drawerOpen}>
+      <Drawer
+        classes={{
+          root: classes.drawerRoot,
+          paper: classes.drawerContent,
+        }}
+        variant="permanent"
+        open={drawerOpen}>
         <DrawerHeader className={classes.drawerHeader}>
           <Settings />
           <IconButton

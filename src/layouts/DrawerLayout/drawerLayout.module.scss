@@ -1,6 +1,7 @@
+
 .drawerHeader {
-  background-color: var(--app-bar-bg);
-  color: var(--primary-color);
+  background: var(--drawer-bg-primary);
+  color: var(--app-bar-color);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -9,6 +10,14 @@
 
 .chevronLeftIcon {
   svg {
-    color: var(--primary-color);
+    color: var(--app-bar-color);
+  }
+}
+
+
+.drawerRoot {
+  .drawerContent {
+    border-right: 0;
+    background: var(--drawer-bg-secondary);
   }
 }
